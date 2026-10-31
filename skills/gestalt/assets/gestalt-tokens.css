@@ -1,0 +1,36 @@
+/* Relationship-named spacing. Map these to your own scale.
+   The values are starting points, not research findings. Keep a visible step
+   between tiers, and check that they stay distinct at each breakpoint. */
+:root {
+  --gap-within: 0.5rem;   /* label to input, icon to text, title to subtitle */
+  --gap-between: 1.5rem;  /* field to field, card to card */
+  --gap-section: 3rem;    /* section to section */
+}
+
+.stack-within,
+.stack-between,
+.stack-section { display: grid; align-content: start; }
+.stack-within { gap: var(--gap-within); }
+.stack-between { gap: var(--gap-between); }
+.stack-section { gap: var(--gap-section); }
+
+/* A set of related actions that wraps instead of overflowing. */
+.cluster { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gap-within); }
+
+/* Repeated items whose inner rows line up across the grid.
+   Set --card-rows to the number of direct children in each card. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: var(--gap-between);
+}
+.card-grid > * {
+  display: grid;
+  grid-row: span var(--card-rows, 3);
+  grid-template-rows: subgrid;
+  row-gap: var(--gap-within);
+}
+
+fieldset.stack-between { border: 0; margin: 0; padding: 0; }
+/* A legend sits outside the fieldset's grid, so gap does not reach it. */
+fieldset.stack-between > legend { padding: 0; margin-block-end: var(--gap-within); }

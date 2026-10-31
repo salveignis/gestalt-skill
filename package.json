@@ -1,0 +1,36 @@
+{
+  "name": "gestalt-skill",
+  "version": "0.1.0",
+  "description": "Agent skill and browser detector that audit, generate and repair web UI with Gestalt principles, labelled by strength of evidence.",
+  "type": "module",
+  "bin": {
+    "gestalt-skill": "cli/bin/cli.mjs"
+  },
+  "files": [
+    "cli/",
+    "skills/",
+    ".claude-plugin/"
+  ],
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "agent-skill",
+    "claude-code",
+    "codex",
+    "cursor",
+    "gestalt",
+    "ui",
+    "design",
+    "accessibility",
+    "audit"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salveignis/gestalt-skill.git"
+  }
+}

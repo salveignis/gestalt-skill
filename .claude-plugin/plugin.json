@@ -1,0 +1,6 @@
+{
+  "name": "gestalt",
+  "version": "0.1.0",
+  "description": "Audit, generate and repair web UI using Gestalt perception, with findings labelled by strength of evidence.",
+  "license": "MIT"
+}

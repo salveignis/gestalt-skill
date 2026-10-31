@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good fixture</title>
+<style>
+  :root { --within: .5rem; --between: 1.5rem; --section: 3rem; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 1rem/1.5 sans-serif; color: #111; background: #fff; }
+  main { max-width: 45rem; margin: 0 auto; padding: 1rem; display: grid; gap: var(--section); }
+  form, fieldset { display: grid; gap: var(--between); border: 0; padding: 0; margin: 0; }
+  .field { display: grid; gap: var(--within); }
+  label { display: block; }
+  input[type=text] { width: 100%; height: 2.5rem; }
+  legend { padding: 0; margin-bottom: var(--within); }
+  .choices { display: grid; gap: var(--within); }
+  .btn { border: 0; border-radius: 8px; padding: 10px 16px; background: #2455d6; color: #fff; }
+  .story { display: grid; gap: var(--within); }
+  .story h2, .story p { margin: 0; }
+</style>
+</head>
+<body>
+<header><nav aria-label="Main"><a href="#a">One</a> <a href="#b">Two</a> <a href="#c">Three</a></nav></header>
+<main>
+  <form>
+    <div class="field"><label for="a">First</label><input id="a" type="text"></div>
+    <div class="field"><label for="b">Second</label><input id="b" type="text"></div>
+    <fieldset>
+      <legend>Size</legend>
+      <div class="choices">
+        <label><input type="radio" name="size"> Small</label>
+        <label><input type="radio" name="size"> Large</label>
+      </div>
+    </fieldset>
+    <div><button class="btn" type="button">Save</button></div>
+  </form>
+  <section class="story">
+    <h2>A heading that sits on its text</h2>
+    <p>Body text that belongs to the heading above.</p>
+  </section>
+</main>
+</body>
+</html>

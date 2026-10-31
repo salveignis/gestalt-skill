@@ -1,0 +1,5 @@
+{
+  "name": "gestalt-skill",
+  "owner": { "name": "gestalt-skill contributors" },
+  "plugins": [{ "name": "gestalt", "source": "./" }]
+}

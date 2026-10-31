@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bad fixture</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 sans-serif; color: #111; background: #fff; }
+  main { width: 720px; margin: 0 auto; padding: 16px; }
+  /* Label sits nearer the previous input. */
+  .field { margin-bottom: 0; }
+  .field label { display: block; margin: 4px 0 20px; }
+  .field input { display: block; width: 100%; height: 40px; }
+  /* Heading floats away from its text. */
+  .story p { margin: 0; }
+  .story h2 { margin: 12px 0 48px; }
+  /* Inner gap larger than the gap between groups. */
+  .plan { display: flex; flex-direction: column; gap: 8px; }
+  .plan-list { display: flex; flex-direction: column; gap: 32px; }
+  /* Almost-identical buttons. */
+  .btn { border: 0; border-radius: 8px; padding: 10px 16px; background: #2455d6; color: #fff; }
+  .btn.off { border-radius: 7px; }
+  .low { color: #bbb; }
+  .boxed { border: 1px solid #999; padding: 16px; box-shadow: 0 1px 4px #0003; }
+  .boxed .inner { border: 1px solid #999; height: 80px; padding: 8px; }
+  .spin { animation: spin 2s linear infinite; width: 80px; height: 80px; background: #eee; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .row { display: flex; flex-direction: row-reverse; gap: 8px; }
+  .rail { display: flex; overflow-x: auto; scrollbar-width: none; gap: 0; }
+  .rail > div { flex: 0 0 25%; height: 80px; background: #ddd; }
+  .blog p { margin: 0 0 8px; }
+  .blog .off { margin-left: 3px; }
+</style>
+</head>
+<body>
+<header><a href="#a">One</a> <a href="#b">Two</a> <a href="#c">Three</a></header>
+<main>
+  <form id="f">
+    <div class="field"><label for="a">First</label><input id="a"></div>
+    <div class="field"><label for="b">Second</label><input id="b"></div>
+    <div class="field"><label for="c">Third</label><input id="c"></div>
+    <div>
+      <label><input type="radio" name="size"> Small</label>
+      <label><input type="radio" name="size"> Large</label>
+    </div>
+    <div class="row"><button class="btn" type="button">Save</button><button class="btn" type="button">Send</button></div>
+  </form>
+  <section class="story">
+    <p>Previous section text that ends here and should be separated from the next title.</p>
+    <h2>Floating heading of a real section</h2>
+    <p>Body text that belongs to the heading above.</p>
+  </section>
+  <section class="plan">
+    <div class="plan-list"><strong>Basic</strong><span>Item</span></div>
+    <div class="plan-list"><strong>Pro</strong><span>Item</span></div>
+  </section>
+  <section>
+    <button class="btn" type="button">A</button>
+    <button class="btn" type="button">B</button>
+    <button class="btn" type="button">C</button>
+    <button class="btn off" type="button">D</button>
+  </section>
+  <p class="low">Low contrast sentence on white.</p>
+  <div class="boxed"><div class="inner">Box in a box</div></div>
+  <div class="spin"></div>
+  <div class="rail"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+  <section class="blog">
+    <p>Aligned paragraph one.</p><p>Aligned paragraph two.</p><p>Aligned paragraph three.</p>
+    <p class="off">Slightly misaligned paragraph.</p>
+  </section>
+</main>
+</body>
+</html>
